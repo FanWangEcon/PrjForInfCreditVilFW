@@ -1,0 +1,24 @@
+#!/usr/bin/bash
+
+# commands to activate bash
+# chmod u+x "G:/repos/PrjForInfCreditVilFW/gitsh"
+# bash "G:/repos/PrjForInfCreditVilFW/gitsh"
+PATHPRJ="G:/repos/PrjForInfCreditVilFW"
+
+eval "$(ssh-agent)"
+ssh-add ~/.ssh/id_rsa
+
+git config --global user.name "Fan Wang"
+git config --global user.email wangfanbsg75@live.com
+
+# CODE FOLDER
+# Pull from remote code folder
+cd "${PATHPRJ}"
+git init
+git remote add github git@github.com:fanwangecon/PrjForInfCreditVilFW
+git pull github main
+# git branch -m master main
+# Push to remote
+git push -u github main
+
+kill $SSH_AGENT_PID

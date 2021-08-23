@@ -1,0 +1,33 @@
+#!/usr/bin/bash
+# commands to activate bash
+# chmod u+x "G:/repos/PrjForInfCreditFWTH/poetrysh"
+
+# cd "G:/repos"
+# poetry new PrjForInfCreditVilFW
+# cd "${PATHPRJ}"
+
+# mkdir docs
+# sphinx-quickstart
+# make html
+
+# open git CMD
+conda activate wk_main
+cd "G:/repos/PrjForInfCreditVilFW"
+# cd /d "G:/repos/PrjForInfCreditVilFW"
+
+# Install dependencies: reads the pyproject.toml file from the current project, resolves the dependencies, and installs them.
+# creates poetry.lock if does not already exist.
+poetry install
+
+# Update latest versions of the dependencies and to update the poetry.lock file
+poetry update
+
+cd "G:/repos/PrjForInfCreditVilFW"
+# cd /d "G:/repos/PrjForInfCreditVilFW/doc"
+make html
+
+# The build command builds the source and wheels archives.
+poetry build
+
+# This command publishes the package, previously built with the build command, to the remote repository.
+poetry publish
