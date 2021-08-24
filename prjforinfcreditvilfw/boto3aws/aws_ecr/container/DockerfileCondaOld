@@ -1,0 +1,37 @@
+FROM continuumio/anaconda3
+
+VOLUME /data
+
+# Conda update
+RUN conda update conda
+
+# https://github.com/ContinuumIO/docker-images/issues/49#issuecomment-311556456
+RUN apt-get update && \
+    apt-get install libgl1-mesa-glx -y
+
+# Install Conda additional packages that i use
+RUN conda install -c conda-forge interpolation
+RUN conda install -c anaconda boto3
+
+# see https://github.com/moby/moby/issues/22832, this allows for code below to run without --no-cache
+ARG CACHE_DATE=2000-01-01
+
+# Clone our private GitHub Repository: ThaiJMP
+RUN git clone https://XXX@github.com/FanWangEcon/ThaiJMP.git /ThaiJMP/
+
+# Clone our private GitHub Repository: PyFan
+RUN git clone https://XXX@github.com/FanWangEcon/pyfan.git /pyfan/
+
+# Make port 80 available to the world outside this container
+EXPOSE 80
+
+# Install software
+ENV PYTHONPATH /pyfan/
+ENV PYTHONPATH $PYTHONPATH:/ThaiJMP/
+
+ENV AWS_BUCKET_NAME=BucketName
+ENV AWS_ACCESS_KEY_ID=XXX
+ENV AWS_SECRET_ACCESS_KEY=XXX
+
+# Run
+CMD ["python", "/ThaiJMP/invoke/invoke.py"]
