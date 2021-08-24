@@ -40,6 +40,7 @@ def solve_model(param_combo=None,
     """
 
     logger.info('1. vfi')
+
     mjall_inst, minterp_inst, lgit_inst, param_inst = \
         genmodel.gen_model_instances(param_combo=param_combo,
                                      data=None, data_map=None)
