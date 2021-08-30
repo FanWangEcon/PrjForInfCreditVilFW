@@ -173,10 +173,8 @@ html_theme_options = {
 
     'navbar_links': [
         ("Quick Start", "quickstart"),
-        ("API", "reference"),
         ("Module Index", "py-modindex"),
         ("Examples", "auto_examples/index"),
-        ("Other Sites", "othersites")
     ],
 
     # Render the next and previous page links in navbar. (Default: true)

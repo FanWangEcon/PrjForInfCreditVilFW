@@ -24,15 +24,4 @@
 ===========================
 
 ``prjforinfcreditvilfw`` is a work-in-progress `package <https://pypi.org/project/prjforinfcreditvilfw/>`__ consisting of various python support
-functions for various research related-tasks. This is a part of the `prjforinfcreditvilfw <https://github.com/fanwangecon/prjforinfcreditvilfw>`__
-repository. Materials are gathered from various `projects <https://fanwangecon.github.io/research>`__ in which python code is used
-for research and paper-administrative tasks. This package is to make it easier to reuse functions created for one project in another project.
-
-There is an associated repository that contains a variety of python examples `Py4Econ <https://fanwangecon.github.io/Py4Econ/>`__.
-
-.. toctree::
-    :hidden:
-    :maxdepth: 2
-
-    quickstart
-    reference
+functions for various research related-tasks in support of the paper `An Empirical Equilibrium Model of Formal and Informal Credit Markets in Developing Countries <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3316939>`__

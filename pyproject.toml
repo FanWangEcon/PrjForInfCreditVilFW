@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "PrjForInfCreditVilFW"
-version = "0.1.0"
+version = "0.1.2"
 description = ""
 authors = ["Fan Wang <wangfanbsg75@live.com>"]
 
@@ -18,6 +18,9 @@ numba = "^0.50.1"
 sklearn = "^0.0"
 boto3 = "^1.15.18"
 urllib3 = "^1.25.10"
+cryptography = "^3.0.0"
+interpolation = "^2.0.0"
+pyfan = "^0.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

@@ -1,4 +1,4 @@
-Get Started
+et Started
 ===========
 
 For a list of functions and classes available in ``pyecon``, please have a
