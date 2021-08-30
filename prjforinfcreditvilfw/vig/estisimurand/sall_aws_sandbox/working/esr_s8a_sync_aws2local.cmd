@@ -1,0 +1,1 @@
+:: copy paste what is in G:\repos\ThaiJMP\vig\estisimurand\sall_aws\esr_s2a_sync_aws2local.cmd
